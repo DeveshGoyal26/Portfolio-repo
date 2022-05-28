@@ -4,7 +4,7 @@
 }
 
 .app__whitebg {
-  background-color: var(--white-color);
+  background-color: var(--geist-foreground);
 }
 
 .app__primarybg {
@@ -52,7 +52,7 @@
 }
 
 .head-text {
-  font-size: 2.75rem;
+  font-size: 1.75rem;
   font-weight: 800;
   text-align: center;
   color: var(--geist-foreground);
@@ -82,10 +82,57 @@
   }
 }
 
+.Typewriter {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  min-width: 435px;
+  max-width: 435px;
+  font-size: 6rem;
+  font-weight: 600;
+  color: white;
+  animation: animated-gradient 10s infinite ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  opacity: 1;
+
+  @keyframes animated-gradient {
+    0%,
+    100% {
+      background-image: linear-gradient(
+        90deg,
+        var(--start-color1),
+        var(--end-color1)
+      );
+    }
+
+    50% {
+      opacity: 1;
+      background-image: linear-gradient(
+        90deg,
+        var(--start-color2),
+        var(--end-color2)
+      );
+    }
+
+    83.333% {
+      opacity: 1;
+      background-image: linear-gradient(
+        90deg,
+        var(--start-color3),
+        var(--end-color3)
+      );
+    }
+  }
+}
+
 .bold-text {
   font-size: 1rem;
   font-weight: 800;
-  color: var(--black-color);
+  color: var(--white-color);
   text-align: left;
 
   @media screen and (min-width: 2000px) {

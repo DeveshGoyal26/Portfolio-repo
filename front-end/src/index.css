@@ -20,12 +20,11 @@
   --start-color1: #007cf0;
   --end-color1: #00dfd8;
 
-  --start-color2: #7928CA;
-  --end-color2: #FF0080;
-  
-  --start-color3: #FF4D4D;
-  --end-color3: #F9CB28;
+  --start-color2: #7928ca;
+  --end-color2: #ff0080;
 
+  --start-color3: #ff4d4d;
+  --end-color3: #f9cb28;
 }
 
 * {
