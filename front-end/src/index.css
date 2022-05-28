@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --geist-foreground: #fff;
+  --geist-background: #000;
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #888;
+
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+
+  --padding: 0.05em;
+  --start-color1: #007cf0;
+  --end-color1: #00dfd8;
+
+  --start-color2: #7928CA;
+  --end-color2: #FF0080;
+  
+  --start-color3: #FF4D4D;
+  --end-color3: #F9CB28;
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}

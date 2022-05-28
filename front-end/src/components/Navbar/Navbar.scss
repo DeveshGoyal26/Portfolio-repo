@@ -1,0 +1,228 @@
+.app__navbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: saturate(180%) blur(5px);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+  box-shadow: none;
+  transition: box-shadow 0.2s ease 0s, background-color 0.2s ease 0s;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    animation: animated-gradient 10s infinite ease;
+    font-weight: 800;
+    letter-spacing: -0.06em;
+
+    @media screen and (min-width: 2000px) {
+      width: 180px;
+      height: 40px;
+    }
+
+    @keyframes animated-gradient {
+      0% {
+        opacity: 1;
+        background-image: linear-gradient(
+          90deg,
+          var(--start-color1),
+          var(--end-color1)
+        );
+      }
+
+      33.333% {
+        opacity: 0;
+      }
+
+      43.333% {
+        opacity: 1;
+        background-image: linear-gradient(
+          90deg,
+          var(--start-color2),
+          var(--end-color2)
+        );
+      }
+
+      53.333% {
+        opacity: 0;
+      }
+
+      83.333% {
+        opacity: 1;
+        background-image: linear-gradient(
+          90deg,
+          var(--start-color3),
+          var(--end-color3)
+        );
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+
+    flex-direction: column;
+
+    div {
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: var(--gray-color);
+      text-decoration: none;
+      flex-direction: column;
+
+      //   text-transform: uppercase;
+      font-weight: 500;
+
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    &:hover {
+      div {
+        background: var(--secondary-color);
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+
+  svg {
+    width: 70%;
+    height: 70%;
+    color: var(--white-color);
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 80%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    background: url("../../assets/bgWhite.png");
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+
+    /* top box shadow */
+    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: var(--secondary-color);
+      margin: 0.5rem 1rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      li {
+        margin: 1rem;
+
+        a {
+          color: var(--gray-color);
+          text-decoration: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 500;
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
