@@ -25,6 +25,13 @@
 
   --start-color3: #ff4d4d;
   --end-color3: #f9cb28;
+
+  --color: var(--geist-cyan);
+  --light-opacity: 0.4;
+  --dark-opacity: 0.5;
+  --geist-cyan: #50e3c2;
+  --geist-violet: #7928ca;
+  --geist-cyan: #50e3c2;
 }
 
 * {

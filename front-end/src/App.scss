@@ -91,7 +91,7 @@
   font-size: 6rem;
   font-weight: 600;
   color: white;
-  animation: animated-gradient 10s infinite ease;
+  animation: animated-gradient 10s linear infinite;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

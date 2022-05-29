@@ -3,6 +3,7 @@ import "./Header.scss";
 import { images } from "../../constants";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { AppWrap } from "../../wrapper";
 
 const Header = () => {
   const scaleVariant = {
@@ -18,6 +19,30 @@ const Header = () => {
 
   return (
     <div id="home" className="app__header app__flex">
+      <div className="app__header-features_gradient-wrapper" role="region">
+        <div
+          className="app__header-features_gradient features_gradient-1"
+          style={{
+            opacity: false ? "0.5" : "0.4",
+            backgroundColor: "var(--geist-cyan)",
+          }}
+        ></div>
+        <div
+          className="app__header-features_gradient features_gradient-2"
+          style={{
+            opacity: false ? "0.5" : "0.2",
+            backgroundColor: "var(--geist-violet)",
+          }}
+        ></div>
+        <div
+          className="app__header-features_gradient features_gradient-3"
+          style={{
+            opacity: false ? "0.5" : "0.4",
+            backgroundColor: "var(--geist-cyan)",
+          }}
+        ></div>
+      </div>
+
       <motion.div whileInView={{ x: [-100, 0] }} transition={{ duration: 0.5 }}>
         <div className="app__header-badge">
           <span></span>
@@ -59,7 +84,7 @@ const Header = () => {
         whileInView={scaleVariant.whileInView}
         className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((el, i) => {
+        {[images.react, images.redux, images.sass].map((el, i) => {
           return (
             <div className="circle-cmp app__flex" key={`circle-${i}`}>
               <img src={el} alt="circle" />
@@ -71,4 +96,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, "Home");

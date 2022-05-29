@@ -35,7 +35,7 @@
     font-size: 20px;
     position: relative;
     z-index: 1;
-    animation: animated-gradient 10s infinite ease;
+    animation: animated-gradient 10s linear infinite;
     font-weight: 800;
     letter-spacing: -0.06em;
 
