@@ -21,23 +21,26 @@ const About = () => {
       </h2>
 
       <div className="app__profiles">
-        {abouts.map((el, i) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: "tween" }}
-            className="app__profile-item"
-            key={el.title + i}
-          >
-            <img src={urlFor(el.imgUrl)} alt={el.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>
-              {el.title}
-            </h2>
-            <p className="p-text" style={{ marginTop: 10 }}>
-              {el.description}
-            </p>
-          </motion.div>
-        ))}
+        {abouts.length &&
+          abouts.map((el, i) => (
+            <motion.div
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: "tween" }}
+              className="app__profile-item"
+              key={el.title + i}
+            >
+              <img 
+              // src={urlFor(el.imgUrl).url()} 
+              alt={el.title} />
+              <h2 className="bold-text" style={{ marginTop: 20 }}>
+                {el.title}
+              </h2>
+              <p className="p-text" style={{ marginTop: 10 }}>
+                {el.description}
+              </p>
+            </motion.div>
+          ))}
       </div>
     </>
   );
