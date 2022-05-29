@@ -32,7 +32,6 @@ const Skills = () => {
         <motion.div className="app__skills-list">
           {skills.length &&
             skills.map((skill) => {
-              // console.log(urlFor(skill.imgUrl));
               return (
                 <motion.div
                   whileInView={{ opacity: [0, 1] }}
@@ -44,10 +43,7 @@ const Skills = () => {
                     className="app__flex"
                     style={{ backgroundColor: skill.bgColor }}
                   >
-                    <img
-                      // src={urlFor(skill.imgUrl).url()}
-                      alt={skill.name}
-                    />
+                    <img src={urlFor(skill.icon).url()} alt={skill.name} />
                   </div>
                   <p className="p-text">{skill.name}</p>
                 </motion.div>

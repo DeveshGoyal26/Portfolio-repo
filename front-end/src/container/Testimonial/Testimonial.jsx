@@ -34,7 +34,7 @@ const Testimonial = () => {
         <>
           <div className="app__testimonial-item app__flex">
             <img
-              // src={urlFor(testimonials[currentIndex].imgurl)}
+              src={urlFor(testimonials[currentIndex].imgurl)}
               alt={testimonials[currentIndex].name}
             />
             <div className="app__testimonial-content">
