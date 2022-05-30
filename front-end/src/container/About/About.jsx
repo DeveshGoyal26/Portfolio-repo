@@ -37,6 +37,15 @@ const About = () => {
               <p className="p-text" style={{ marginTop: 10 }}>
                 {el.description}
               </p>
+              <div className="app__profile-container">
+                <a
+                  href="https://drive.google.com/file/d/18JbbrNoJ0_AOHadhqb0geMTLKCyk9nDc/view?usp=sharing"
+                  download
+                  class="app__profile-btn"
+                >
+                  Download CV
+                </a>
+              </div>
             </motion.div>
           ))}
       </div>
