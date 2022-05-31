@@ -113,7 +113,10 @@ const Navbar = () => {
           animate={isOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
-          style={{ width: isOpen ? "300px" : "0px" }}
+          style={{
+            width: isOpen ? "300px" : "0px",
+            boxShadow: isOpen ? "0 0 20px hsl(0deg 0% 66% / 15%)" : "",
+          }}
         >
           <motion.div className="background" variants={sidebar} />
           <motion.ul variants={variants1}>
