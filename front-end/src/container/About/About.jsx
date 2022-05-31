@@ -41,7 +41,7 @@ const About = () => {
                 <a
                   href="https://drive.google.com/file/d/18JbbrNoJ0_AOHadhqb0geMTLKCyk9nDc/view?usp=sharing"
                   download
-                  class="app__profile-btn"
+                  className="app__profile-btn"
                 >
                   Download CV
                 </a>

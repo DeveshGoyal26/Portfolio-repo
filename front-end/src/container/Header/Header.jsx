@@ -50,7 +50,7 @@ const Header = () => {
           <div style={{ marginLeft: 20, height: "300px" }}>
             <Typewriter
               options={{
-                strings: ["Hi My Name is", "Devesh"],
+                strings: ["Hi My Name is", "Devesh Goyal"],
                 autoStart: true,
                 loop: true,
               }}
