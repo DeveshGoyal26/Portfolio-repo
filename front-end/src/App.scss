@@ -230,3 +230,34 @@
     padding: 2rem;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 99%;
+  border-radius: 100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // background: #666565;
+  background: radial-gradient(
+    circle,
+    #f48fb1 0%,
+    #ce93d8 20%,
+    #b2ebf2 40%,
+    #a5d6a7 60%,
+    #b39ddb 100%
+  );
+  border-radius: 100px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 63, 63);
+  // border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
