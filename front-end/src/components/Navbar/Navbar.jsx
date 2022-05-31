@@ -113,6 +113,7 @@ const Navbar = () => {
           animate={isOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
+          style={{ width: isOpen ? "300px" : "0px" }}
         >
           <motion.div className="background" variants={sidebar} />
           <motion.ul variants={variants1}>
@@ -123,7 +124,7 @@ const Navbar = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <a onClick={() => setToggle(false)} href={`#${el}`}>
+                  <a onClick={() => toggleOpen()} href={`#${el}`}>
                     <div
                       className="text-placeholder"
                       style={{ border: `2px solid ${colors[i]}` }}
