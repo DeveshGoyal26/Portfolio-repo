@@ -87,37 +87,34 @@
   font-size: 6rem;
   font-weight: 600;
   color: transparent;
-  background: radial-gradient(
-    circle,
+  background: linear-gradient(
+    45deg,
     #f48fb1 0%,
     #ce93d8 20%,
     #b2ebf2 40%,
     #a5d6a7 60%,
     #b39ddb 100%
   );
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
   background-clip: text;
+  background-size: 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
   padding-left: var(--padding);
   padding-right: var(--padding);
-  transition: background-image 0.5s linear;
-  background-size: cover;
-  background-position: 51%;
   position: absolute;
   left: 10px;
   max-width: 400px;
 
-  @keyframes gradientAnimation {
+  @keyframes animate {
     0% {
-      background-position: 0%;
+      background-position: 0px 50%;
     }
     50% {
-      background-position: 100%;
+      background-position: 100% 50%;
     }
     100% {
-      background-position: 0%;
+      background-position: 0px 50%;
     }
   }
 }

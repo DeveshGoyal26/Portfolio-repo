@@ -69,6 +69,7 @@ const Work = () => {
 
                 <motion.div
                   whileHover={{ opacity: [0, 1] }}
+                  whileFocus={{ opacity: [0, 1] }}
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                   className="app__work-hover app__flex"
                 >
@@ -103,8 +104,28 @@ const Work = () => {
                 >
                   {el.description}
                 </p>
+                <span
+                  className="p-text"
+                  style={{
+                    margin: 0,
+                    marginTop: 10,
+                    color: "white",
+                    fontSize: "0.7rem",
+                  }}
+                >
+                  Tech Stack
+                </span>
+                <p
+                  className="p-text"
+                  style={{
+                    textAlign: "center",
+                    fontSize: "0.7rem",
+                  }}
+                >
+                  {el.techstack.join(", ")}
+                </p>
                 <div className="app__work-tag app__flex">
-                  <p className="p-text">{el.tags[0]}</p>
+                  <p className="p-text">{el.tags[1]}</p>
                 </div>
               </div>
             </div>
