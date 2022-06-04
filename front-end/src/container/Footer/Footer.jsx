@@ -14,7 +14,7 @@ const Footer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const { username, email, message } = formData;
+  const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -26,7 +26,7 @@ const Footer = () => {
 
     const contact = {
       _type: "contact",
-      name: formData.username,
+      name: formData.name,
       email: formData.email,
       message: formData.message,
     };
@@ -38,6 +38,23 @@ const Footer = () => {
         setIsFormSubmitted(true);
       })
       .catch((err) => console.log(err));
+
+    fetch("https://formsubmit.co/ajax/cd76b9fc792636ac27d07a333a7ae966", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => data)
+      .catch((error) => console.log(error));
+    // return false;
   };
 
   return (
@@ -59,15 +76,32 @@ const Footer = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+        <form
+          className="app__footer-form app__flex"
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit();
+          }}
+        >
+          <input type="text" name="_honey" style={{ display: "none" }} />
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://portfolio-repo-new.vercel.app/"
+            onChange={(e) => {
+              e.preventDefault();
+            }}
+          />
           <div className="app__flex">
             <input
               className="p-text"
               type="text"
               placeholder="Your Name"
-              name="username"
-              value={username}
+              name="name"
+              value={name}
               onChange={handleChangeInput}
+              required
             />
           </div>
           <div className="app__flex">
@@ -78,6 +112,7 @@ const Footer = () => {
               name="email"
               value={email}
               onChange={handleChangeInput}
+              required
             />
           </div>
           <div>
@@ -87,12 +122,15 @@ const Footer = () => {
               value={message}
               name="message"
               onChange={handleChangeInput}
+              required
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
-            {!loading ? "Send Message" : "Sending..."}
-          </button>
-        </div>
+          <input
+            type="submit"
+            className="p-text button"
+            value={!loading ? "Send Message" : "Sending..."}
+          />
+        </form>
       ) : (
         <div>
           <h3 className="head-text">Thank you for getting in touch!</h3>
