@@ -130,7 +130,7 @@
 
   p {
     font-weight: 800;
-    color: var(--secondary-color);
+    color: var(--main-secondary-color);
   }
 
   @media screen and (max-width: 450px) {
@@ -147,7 +147,7 @@
   color: var(--gray-color) !important;
   text-align: center !important;
   line-height: 1.5 !important;
-//   opacity: 1 !important;
+  //   opacity: 1 !important;
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem !important;

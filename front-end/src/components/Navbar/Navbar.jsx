@@ -55,7 +55,7 @@ const Path = (props) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="var(--secondary-color)"
+    stroke="var(--main-secondary-color)"
     strokeLinecap="round"
     {...props}
   />
