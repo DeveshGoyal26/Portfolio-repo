@@ -241,6 +241,8 @@
   align-items: flex-start;
   height: 100%;
   margin-left: 1rem;
+  max-width: fit-content;
+  min-width: 335px;
 
   div {
     width: 100px;
@@ -309,6 +311,8 @@
     width: 100%;
     object-fit: contain;
     z-index: 1;
+    margin: auto;
+    max-width: 400px;
   }
 
   .overlay_circle {
