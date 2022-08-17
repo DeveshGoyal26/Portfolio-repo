@@ -39,7 +39,7 @@ const About = () => {
               </p>
               <div className="app__profile-container">
                 <a
-                  href="https://drive.google.com/file/d/18JbbrNoJ0_AOHadhqb0geMTLKCyk9nDc/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1HufGk5-hDUvLgZyQQs9Ue8GFKnQDZ5av/view?usp=sharing"
                   download
                   className="app__profile-btn"
                 >
