@@ -4,7 +4,6 @@ import { images } from "../../constants";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { AppWrap } from "../../wrapper";
-console.log("images:", images);
 
 const Header = () => {
   const scaleVariant = {
