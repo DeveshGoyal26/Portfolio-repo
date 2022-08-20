@@ -4,6 +4,7 @@ import { images } from "../../constants";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { AppWrap } from "../../wrapper";
+console.log("images:", images);
 
 const Header = () => {
   const scaleVariant = {
@@ -68,7 +69,7 @@ const Header = () => {
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delaychildren: 0.5 }}
       >
-        <img src={images.profile} alt="" />
+        <img src={images.picture} alt="" />
 
         <motion.img
           whileInView={{ opacity: [0, 1] }}
