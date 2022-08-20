@@ -43,7 +43,8 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["React", "Next js", "Javascript", "Tailwind", "All"].map((el, i) => (
+        {/* ["React", "Next js", "Javascript", "Tailwind", "All"] */}
+        {["React", "Javascript", "All"].map((el, i) => (
           <div
             key={i}
             onClick={() => handleWorkFilter(el)}
